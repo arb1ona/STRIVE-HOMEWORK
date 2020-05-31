@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<!--
+ASSIGNMENT RULES
+- The solution must be pushed to the repository and be available for the tutors by the end of the day
+- You can ask for tutor's help
+- You can google / use StackOverflow BUT we suggest you to use just the material provided
+- To test the page, just open it with your default browser.
+- Use Bootstrap4 classes to render the page.
+- Use correctly containers and rows in order to have a great display
+ASSIGNMENT TOPIC
+You are creating a website to showcase your favourite music albums.
+In this page you'd like to have a short bio of yourself, the top albums of your life, 
+the worst album you ever listen to and everything related to the music you love.
+NOTE:
+Most of the time, even the most expert of designers, need inspiration.
+Spend 30 minutes surfing the web and searching for the way of rapresenting album that you like the most.
+Could be the Amazon way, the Spotity or Apple music way or some other blog out there.
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- IMPORT ALL THE BOOSTRAP RELATED CSS & SCRIPTS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+      /* EXERCISE 1
+            For all Albums we'd like to have a consistent style.
+            Create a class for:
+            - The album container
+            - The album cover
+            - The album title
+            - The album group / singer / dj
+            - The album genre
+            - The album duration
+            - etc
+         */
+
+      /* EXERCISE 2 
+            Based on the artists you like the most, create a combination of colors 
+            to override bootstrap standard and make your website unique
+         */
+    </style>
+  </head>
+  <body>
+    
+    <!-- EXERCISE 3 
+            Implement a navigation bar using the bootstrap component
+            This navigation bar must be linked to every section in your page
+        -->
+
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark ">
+            <a class="navbar-brand" href="#">MusKick</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item btn btn-outline-warning m-1">
+                  <a class="nav-link" href="d2.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item btn btn-outline-warning m-1 active" >
+                  <a class="nav-link" href="review.html">Review</a>
+                </li>
+                <li class="nav-item btn btn-outline-warning m-1 dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Track List
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <input class="dropdown-item" type="button" value="Add Track" data-toggle="modal" data-target="#staticBackdrop" />
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="d2.html">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Review</li>
+            </ol>
+          </nav>
+
+    <!-- EXERCISE 5
+            Create a section for the album review.
+            Pick one of your fav albums, and create a section with:
+            - Cover
+            - Title
+            - Band
+            - Lenght
+            - Genre
+            - Tracklist
+            - ... And whatever you think it's interesting about it!
+        -->
+        <div class="container">
+                <div class="row mt-3 shadow p-3 mb-5 bg-white rounded">
+                    <div class="col-md-8">
+                      <img class="img-fluid" src="image/image.jpg" alt="" />
+                    </div>
+            
+                    <div class="col-md-4 " id="project">
+                      <h3 class="my-3">Music to Be Murdered By</h3>
+                      <p>
+                        Music to Be Murdered By
+                        is the eleventh studio album by American rapper Eminem.
+                        It was released on January 17, 2020, by Aftermath Entertainment,
+                        Interscope Records and Shady Records. It was released as a surprise with 
+                        no prior announcement, similarly to his previous and tenth studio album Kamikaze
+                         (2018). The album was produced by Eminem and Dr. Dre, amongst other producers. 
+                         
+                      </p>
+                    </div>
+                    <div class="col-md-12 col-lg-12">
+                        <table class="table text-center  mt-3 shadow p-3 mb-5 bg-white rounded">
+                                <thead class="thead-dark">
+                                  <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Tittle</th>
+                                    <th scope="col">Length</th>
+                                    <th scope="col">Delete</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>@mdo</td>
+                                    <td>
+                                        <button type="button" class="btn btn-danger">Danger</button>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>@fat</td>
+                                    <td>
+                                        <button type="button" class="btn btn-danger">Danger</button>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td>Larry</td>
+                                    <td>@twitter</td>
+                                    <td>
+                                        <button type="button" class="btn btn-danger">Danger</button>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </table>
+                        <input class="btn btn-primary" type="button" value="Add Track" data-toggle="modal" data-target="#staticBackdrop" />
+                    </div>
+                    <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="staticBackdropLabel">Add Track</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <form>
+                                <div class="row">
+                                  <div class="col-6">
+                                    <div class="input-group mb-3">
+                                      <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroup-sizing-default">Track number</span>
+                                      </div>
+                                      <input type="number" class="form-control" required min="1" max="10">
+                                    </div>
+                                    <div class="input-group mb-3">
+                                      <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroup-sizing-default">Track name</span>
+                                      </div>
+                                      <input type="text" class="form-control" required aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                    </div>
+                                  </div>
+                                  <div class="col-6">
+                                    <div class="input-group mb-3">
+                                      <div class="input-group-prepend">
+                                        <span class="input-group-text"  id="inputGroup-sizing-default">Track length</span>
+                                      </div>
+                                      <input type="time" class="form-control" required>
+                                    </div>
+                                    <div class="input-group mb-3">
+                                      <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroup-sizing-default">Track featuring</span>
+                                      </div>
+                                      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                    </div>
+                                    <div class="input-group mb-3">
+                                      <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroup-sizing-default">Live Track</span>
+                                      </div>
+                                      <input type="checkbox" id="checkbox" class="form-control" >
+                                    </div>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                            <div class="modal-footer d-flex justify-content-center">
+                                <button type="button" id="clearBtn" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              <button type="button" id="addBtn" class="btn btn-primary" >Add Track</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  
+    <!-- EXERCISE 6
+            Worst album list! Find out the music you don't really like or you find overrated and list it
+            in this "hall of shame" chart!
+        -->
+
+    <!-- EXERCISE 7
+            Do you have any musician / band you admire or you are fan of?
+            This section is dedicated to him / her / them!
+            Feel free to experiment in this part of the page.
+        -->
+
+
+    <!-- EXERCISE 8
+            Just covers!
+            Create a tapestry of album pictures. Every album picture must be "square" (use CSS to do that).
+            Put at least 20 covers (also repeated) to have a nice effect and see how Bootstrap handles it.
+        -->
+
+    <!-- EXERCISE 9
+            Implement a footer with some information / social links
+        -->
+
+    <!-- EXERCISE 10
+            Every time the user clicks on a album picture, toggle the album details
+        -->
+
+    <!-- EXERCISE 11
+            Add a button to each section. By clicking on it the section appears (if hidden) or disappears (if visible)
+        -->
+
+    <!--
+            EXERCISE 12
+            Add in the footer a field that counts, on page load, how many ALBUMS are on the page 
+        -->
+    </div>
+    <footer id="sticky-footer" class=" bg-dark text-white-50">
+        <div class="container">
+          <div class="row">
+            <div class="col-4 pt-3 text-center d-flex justify-content-center flex-column">
+              <p><b>INFO</b></p>
+              <p><b>Addres : </b>Oslo, Norway</p>
+              <p><b>Phone : </b> 0000000</p>
+              <p><b>Email : </b>Oslo, Norway</p>
+              <p><img src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/facebook-512.png" height="20px" width="20px"/> MusKick</p>
+              <p><img src="https://vollgard.no/wp-content/uploads/2016/02/instagram-logo-vector-png-7-300x294.png" height="20px" width="20px"/> MusKick</p>
+            </div>
+            <div class="col-4 pt-3 pb-5">
+              <p>Contac US</p>
+              <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputText1">Message</label>
+                  <textarea type="text" class="form-control" id="exampleInputText1"></textarea>
+                </div>
+                <button type="button" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+            <div class="col-4 pt-3 text-center d-flex justify-content-center flex-column">
+              <p><b>Nav Links</b></p>
+              <ol style="list-style:none; padding:0">
+                <li><a href="D2.html">Home</a></li>
+                <li><a href="#">Review</a></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </footer>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>    
+        <script>
+            window.onload = function(){
+
+                let reference = document.querySelectorAll(".table tbody button")
+                let rowReference = document.querySelectorAll(".table tbody tr")
+                console.log(rowReference)
+                for(let i=0; i<reference.length; i++){
+                    reference[i].addEventListener("click",function(){
+                        rowReference[i].remove()
+                    })
+                }
+
+                let buttonClear = document.querySelector(".modal-footer #clearBtn")
+                let referenceModal = document.querySelectorAll(".form-control")
+                console.log(referenceModal)
+                buttonClear.addEventListener("click",function(){
+                    document.querySelector("#checkbox").checked= false
+                    for(let i=0;i<referenceModal.length; i++){
+                        referenceModal[i].value = ""
+                        referenceModal[i].style.borderColor=""
+                    }
+                })
+
+                let addBtn = document.querySelector("#addBtn")
+                addBtn.addEventListener("click",function(){
+                    
+                    let reference = document.querySelectorAll(".form-control")
+                    let array=[]
+                    for(let i=0; i<3; i++){
+                        array.push(reference[i].value)
+                    }
+                    if(array[0] !== "" && array[1] !== "" && array[2] !== ""){
+                        let tbody = document.querySelector("tbody")
+                        let newTr = document.createElement("tr")
+                        let newTd0 = document.createElement("th")
+                        let newTd1 = document.createElement("td")
+                        let newTd2 = document.createElement("td")
+                        let newTd3 = document.createElement("td")
+                        let newTd4 = document.createElement("button")
+
+                        newTd4.classList="btn btn-danger"
+                        newTd4.innerText="Delete"
+
+                        newTd4.addEventListener("click",function(){
+                            let lastChild = document.querySelector(".table tbody tr:last-child")
+                            lastChild.remove()
+                    })
+
+                        newTd3.appendChild(newTd4)
+
+
+                        newTd0.innerText = array[0]
+                        newTd1.innerText = array[1]
+                        newTd2.innerText = array[2]
+
+                        newTr.appendChild(newTd0)
+                        newTr.appendChild(newTd1)
+                        newTr.appendChild(newTd2)
+                        newTr.appendChild(newTd3)
+                        tbody.appendChild(newTr)
+                        alert("A new track was added")
+                        document.querySelector("#addBtn").setAttribute("data-dismiss","modal")
+                        let referenceModal = document.querySelectorAll(".form-control")
+                        for(let i=0;i<referenceModal.length; i++){
+                        referenceModal[i].value = ""
+                        referenceModal[i].style.borderColor =""
+                        }
+                    }else{
+                        alert("You need to fill the required inputs!")
+                        let requiredInput = document.querySelectorAll(".form-control")
+                        for(let i= 0; i<3; i++){
+                            requiredInput[i].style.borderColor = "red"
+                        }
+                        document.querySelector("#addBtn").removeAttribute("data-dismiss")
+                    }
+
+
+                })
+
+                
+            
+            }
+        </script>
+    </body>
+</html>

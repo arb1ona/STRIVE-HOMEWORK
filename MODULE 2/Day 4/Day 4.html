@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <title>STRIVE TEAM GENERATOR</title>
+
+  <style>
+      .input-group-append {
+          width: 850px;
+      }
+
+      .display-header {
+          padding-left: 300px;
+          font-weight: 700;
+      }
+
+      body {
+          background-color: aquamarine;
+      }
+  </style> 
+</head>
+
+<body>
+
+   
+
+  <div class="container">
+    <div class="row justify-center">
+      <div class="col-12">
+        <header>
+            <h1 class="display-header my-4">STRIVE TEAM GENERATOR</h1>
+        </header>
+
+    <!--    <div class="col-2">  -->  
+        <div class="input-group my-4 ">
+          <input id="userinput" type="text" class="form-control" placeholder="add a name..." aria-label="Add a name" aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <button class="btn btn-outline-info " id="enter" type="button">Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row row-cols-lg-3"  id="dealofweek">
+        <div class="col mb-4">
+            <div>
+                <ul class="list-group">
+                    <li class="list-group-item">Arbiona</li>
+                    <li class="list-group-item">Nathalie</li>
+                    <li class="list-group-item">Alina</li>
+                    <li class="list-group-item">Tetiana</li>
+                    <li class="list-group-item">Yvette</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col mb-4">
+            <div>
+                <ul class="list-group">
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"> </li>
+                    <li class="list-group-item"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col mb-4">
+            <div>
+                <ul class="list-group">
+                    <li class="list-group-new-item"></li>
+                    <li class="list-group-new-item"></li>
+                    <li class="list-group-new-item"></li>
+                    <li class="list-group-new-item"> </li>
+                    <li class="list-group-new-item"></li>
+                </ul>
+            </div>
+        </div>       
+    </div>
+</div>
+
+
+
+
+
+
+  <!-- Scripts -->
+
+  <script>
+
+      var button = document.getElementById("enter");
+      var input = document.getElementById("userinput");
+      var ul = document.querySelector("ul");
+      
+    button.addEventListener("click", function() {
+        var li = document.createElement("li");
+        li.className = 'list-group-item';
+        li.textContent = input.value;
+        ul.appendChild(li);
+    })
+
+    var myNodelist = document.getElementsByTagName("LI");
+    var i;
+    for (i = 0; i < myNodelist.length; i++) {
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "close";
+      span.appendChild(txt);
+      myNodelist[i].appendChild(span);
+    }
+    
+    // Click on a close button to hide the current list item
+    var close = document.getElementsByClassName("close");
+    var i;
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+      }
+    }
+
+
+    var button = document.getElementById("output");
+      var output = document.getElementById("useroutput");
+      var ul = document.querySelector("ul");
+      
+    button.addEventListener("click", function() {
+        var li = document.createElement("li");
+        li.className = 'list-group-new-item';
+        li.textContent = output.value;
+        ul.appendChild(li);
+    })
+
+    var myNodelist = document.getElementsByTagName("LI");
+    var i;
+    for (i = 0; i < myNodelist.length; i++) {
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "close";
+      span.appendChild(txt);
+      myNodelist[i].appendChild(span);
+    }
+
+
+
+
+
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits;
+
+function myFunction() {
+  fruits.push("Kiwi");
+  document.getElementById("demo").innerHTML = fruits;
+}
+
+
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+</body>
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+
+</html>
