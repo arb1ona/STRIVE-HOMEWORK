@@ -1,0 +1,289 @@
+/* EXERCISE 1
+Create and array with the first 5 positive numbers
+*/
+
+let listOfNumbers = [1, 2, 3, 4, 5];
+console.log(listOfNumbers);
+
+/* EXERCISE 2
+Create an object containing your name, surname, email address and age.
+*/
+
+let student = {firstName:"Arbiona", lastName:"Shahu", email:"arbiona@gmail.com", age:25};
+console.log(student);
+
+/* EXERCISE 3
+Add to the previously created object a boolean value to rappresent wheter you have or not a driving license
+// */
+
+let student = {firstName:"Arbiona", lastName:"Shahu", email:"arbiona.shahu@gmail.com", age:"25"};
+student.haslicense= true
+console.log(student)
+
+// /* EXERCISE 4
+// Remove from the previously created object the age
+// */
+
+let student = {firstName:"Arbiona", lastName:"Shahu", email:"arbiona.shahu@gmail.com", age:"25"};
+
+delete student.age;
+
+console.log(student);
+
+// /* EXERCISE 5
+// Create a second object with name, surname, email address and verify that this object has a different email address
+// */
+
+let student1 = {firstName:"Arbiona", lastName:"Shahu", email:"arbi@gmail.com", age:"25"};
+let student2 = {firstName:"Arbiona", lastName:"Shahu", email:"arba@gmail.com", age:"25"};
+
+if (student1.email === student2.email) {
+    console.log(student1.email === student2.email)
+}
+console.log(student1.email === student2.email);
+
+/* EXERCISE 6
+You are working for a eCommerce. In the variable totalShoppingCart you have the total amount spent by the current user.
+In your eCommerce you have a promotion: if the customer shopping cart is more than 50€, 
+they can have free shipping (otherwise it costs 10€).
+Write an algorithm that calculate totalCost based on this assumption.
+*/
+
+let totalShoppingCart = 120;
+let shipping = 10;
+let totalCost;
+
+(totalShoppingCart > 50) ? (totalCost = totalShoppingCart) : (totalCost = totalShoppingCart + shipping)
+console.log(totalCost);
+
+
+/* EXERCISE 7
+You are working for the same eCommerce. Today is the black friday and everything has a 20% discount at the end of the purchase.
+Modify the previous answer inserting this information and, applying the same rules for the shipping cost, calculate the totalShopping.
+*/
+
+let totalShoppingCart = 120;
+let shipping = 10;
+
+let totalShopping;
+let blackFridayPromo = 0.2;
+let purchasedPromo = totalShoppingCart * blackFridayPromo;
+let totalAfterPromo = totalShoppingCart - purchasedPromo;
+let shippingPromo = shipping * blackFridayPromo;
+let finalShipping = shipping - shippingPromo;
+
+(totalAfterPromo > 50) ? (totalShopping = totalAfterPromo) : (totalShopping = totalAfterPromo + finalShipping)
+console.log(totalShopping);
+
+/* EXERCISE 8
+Create an object rapresenting a car with properties like brand, model, licensePlate.
+After you create the first car, clone it and change the licensePlate without affecting the original car.
+Do it for five cars.
+*/
+
+const myCar1 = {
+    brand: "mercedes",
+    model: "a-class",
+    licensePlate: "ab12",
+};
+
+const myCar2 = {};
+const myCar3 = {};
+const myCar4 = {};
+const myCar5 = {};
+
+Object.assign(myCar2, myCar1);
+Object.assign(myCar3, myCar1);
+Object.assign(myCar4, myCar1);
+Object.assign(myCar5, myCar1);
+
+myCar2.licensePlate = "df59";
+myCar3.licensePlate = "cr76";
+myCar4.licensePlate = "se69";
+myCar5.licensePlate = "rg85";
+
+console.log(myCar2);
+console.log(myCar3);
+console.log(myCar4);
+console.log(myCar5);
+
+/* EXERCISE 9
+Create a new array called carsForRent containing all the cars from the previous exercise
+*/
+
+const carsForRent = [myCar1, myCar2, myCar3, myCar4, myCar5]
+
+
+/* EXERCISE 10
+Remove the first and the last car from the carsForRent array.
+*/
+
+const myCar1 = {
+    brand: "mercedes",
+    model: "a-class",
+    licensePlate: "ab12",
+};
+
+const myCar2 = {};
+const myCar3 = {};
+const myCar4 = {};
+const myCar5 = {};
+
+Object.assign(myCar2, myCar1);
+Object.assign(myCar3, myCar1);
+Object.assign(myCar4, myCar1);
+Object.assign(myCar5, myCar1);
+
+myCar2.licensePlate = "df59";
+myCar3.licensePlate = "cr76";
+myCar4.licensePlate = "se69";
+myCar5.licensePlate = "rg85";
+
+console.log(myCar2);
+console.log(myCar3);
+console.log(myCar4);
+console.log(myCar5);
+
+const carsForRent = [myCar1, myCar2, myCar3, myCar4, myCar5]
+
+const lastCar = carsForRent.pop();
+const firstCar = carsForRent.splice(0,1);
+
+console.log("last car", lastCar);
+console.log("first car", firstCar);
+
+console.log(carsForRent);
+
+
+/* EXERCISE 11
+Print in the console, the types of a single car, of the car licensePlate and of the brand
+*/
+
+const myCar1 = {
+    brand: "mercedes",
+    model: "a-class",
+    licensePlate: "ab12",
+};
+
+const myCar2 = {};
+const myCar3 = {};
+const myCar4 = {};
+const myCar5 = {};
+
+Object.assign(myCar2, myCar1);
+Object.assign(myCar3, myCar1);
+Object.assign(myCar4, myCar1);
+Object.assign(myCar5, myCar1);
+
+myCar2.licensePlate = "df59";
+myCar3.licensePlate = "cr76";
+myCar4.licensePlate = "se69";
+myCar5.licensePlate = "rg85";
+
+console.log(myCar2);
+console.log(myCar3);
+console.log(myCar4);
+console.log(myCar5);
+
+const carsForRent = [myCar1, myCar2, myCar3, myCar4, myCar5]
+
+const lastCar = carsForRent.pop();
+const firstCar = carsForRent.splice(0,1);
+
+console.log("last car", lastCar);
+console.log("first car", firstCar);
+
+console.log(carsForRent);
+for (let i = 0; i< carsForRent.length; i++){
+    console.log("brand:", carsForRent[i].brand, "licensePlate:", carsForRent[i].licensePlate);
+}
+
+/* EXERCISE 12
+Create a new array called carsForSale and insert 3 cars in it.
+Store in the variable totalCars the number of cars in both carsForSale and carsForRent arrays
+*/
+
+
+const myCar1 = {
+    brand: "mercedes",
+    model: "a-class",
+    licensePlate: "ab12",
+};
+
+const myCar2 = {};
+const myCar3 = {};
+const myCar4 = {};
+const myCar5 = {};
+
+Object.assign(myCar2, myCar1);
+Object.assign(myCar3, myCar1);
+Object.assign(myCar4, myCar1);
+Object.assign(myCar5, myCar1);
+
+myCar2.licensePlate = "df59";
+myCar3.licensePlate = "cr76";
+myCar4.licensePlate = "se69";
+myCar5.licensePlate = "rg85";
+
+console.log(myCar2);
+console.log(myCar3);
+console.log(myCar4);
+console.log(myCar5);
+
+
+const carsForRent = [myCar1, myCar2, myCar3, myCar4, myCar5];
+const carsForSale = [myCar1, myCar4, myCar5];
+
+let totalCars;
+
+totakCars = carsForRent.length + carsForSale.length;
+console.log(totakCars);
+
+
+/* EXERCISE 13
+Print in the console the data from each car in the carsForSale array
+*/
+
+const myCar1 = {
+    brand: "mercedes",
+    model: "a-class",
+    licensePlate: "ab12",
+};
+
+const myCar2 = {};
+const myCar3 = {};
+const myCar4 = {};
+const myCar5 = {};
+
+Object.assign(myCar2, myCar1);
+Object.assign(myCar3, myCar1);
+Object.assign(myCar4, myCar1);
+Object.assign(myCar5, myCar1);
+
+myCar2.licensePlate = "df59";
+myCar3.licensePlate = "cr76";
+myCar4.licensePlate = "se69";
+myCar5.licensePlate = "rg85";
+
+console.log(myCar2);
+console.log(myCar3);
+console.log(myCar4);
+console.log(myCar5);
+
+
+const carsForRent = [myCar1, myCar2, myCar3, myCar4, myCar5];
+const carsForSale = [myCar1, myCar4, myCar5];
+
+let totalCars;
+
+totakCars = carsForRent.length + carsForSale.length;
+console.log(totakCars);
+
+for (let i =0; i < carsForSale.length; i++){
+    console.log(carsForSale[i]);
+}
+
+
+/* WHEN YOU ARE FINISHED
+Send the code via Slack to the tutor! In the next days we'll also learn how to use GIT 
+*/

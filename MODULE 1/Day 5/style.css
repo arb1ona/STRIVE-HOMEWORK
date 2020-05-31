@@ -1,0 +1,129 @@
+body {
+	margin: 0;
+	background: rgb(151, 151, 151);
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 700;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+nav {
+  float: right; 
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 0px;
+  font-size: 16px;
+
+  position: relative;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav a::before {
+  content: :'';
+  display: block;
+  height: 5px;
+  width: 100%;
+  background-color: #444;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+
+body{
+  margin: 0;
+  padding: 0;
+  background: url(wallpaper.jpg) no-repeat;
+  background-size: cover;
+  width: 800px;
+  
+}
+.div{
+  background-image: url('wallpaper.jpg');
+  width: 450px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  text-align: center;
+  margin: auto;
+  margin-top: 5%;
+  color: white;
+  font-family: 'Century Gothic',sans-serif;
+}
+.img{
+  border-radius: 50%;
+  width: 300px;
+  height: 230px;
+}
+.div h1{
+  font-size: 40px;
+  letter-spacing: 4px;
+  font-weight: 100;
+}
+.div h3{
+  font-size: 20px;
+  letter-spacing: 3px;
+  font-weight: 100;
+}
+.div p{
+  text-align: justify;
+}
+ul{
+  margin: 0;
+  padding: 0;
+}
+.div li{
+  display: inline-block;
+  margin: 6px;
+  list-style: none;
+}
+.div li a{
+  color: white;
+  text-decoration: none;
+  font-size: 65px;
+  transition: all ease-in-out 250ms;
+}
+.div li a:hover{
+  color: #b9b9b9;
+}
+.smedia {
+  padding: 40px;
+  font-size: 50px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 60%;
+}
+

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>My Fav Barber Shop</title>
+  </head>
+  <body>
+<div class="div">
+  <img src="logo.png" alt="" class="img">
+  <h1>My Fav Barber Shop</h1>
+  <h3>A barber shop isn’t a hobby,<br/></br>it’s a life style.</h3>
+
+</div>
+
+<!-- Navigation Bar  -->
+
+<body>
+  <header>
+    <div class="container">
+      
+      <nav>
+        <ul>
+          <li><a href="#offers">Our Offers</a></li>
+          <li><a href="#email">Contact</a></li>
+          <li><a href="#submit">Booking</a></li>
+          <li><a href="#adress">Adress</a></li>
+        </ul>
+      </nav>
+ 
+    </div>
+  </header>
+
+<div class="div">
+  <h2 id="offers">Our Offers</h2>
+  <h3>Cut ~ Shave ~ Trim<br/></br>Starting at $15</h3>
+</div>
+
+
+
+<!-------- Leave email ----------------->
+
+<div class="div">
+  <h2 id="offers">Contact</h2>
+
+  <input id="email" type="text" />
+</div>
+<div>
+  <input id="submit" type="button" value="submit data!" onclick="getEmailData()" />
+</div>
+
+
+
+<!------------------- Booking ex 7 ------------------------>
+
+<div class="div">
+  <h2 id="offers">Booking</h2>
+  
+  <input id="name" type="text" />
+</div>
+<div>
+  <input id="date" type="date" />
+</div>
+<div>
+  <input id="phonenumber" type="text" />
+</div>
+<div>
+  <input id="saveButton" type="button" value="save data!" onclick="getUserData()" />
+</div>
+
+<script>
+
+  function getEmailData() {
+    let email = document.querySelector('#email').value
+    console.log('email is', email)
+  }
+  function getUserData() {
+    let name = document.querySelector('#name').value
+    let date = document.querySelector('#date').value
+    let phonenumber = document.querySelector('#phonenumber').value
+    console.log('name is', name)
+    console.log('date is', date)
+    console.log('phonenumber is', phonenumber)
+
+    let userDiv = document.createElement('div')
+    userDiv.innerText = 'you inputted ' + name + ' and ' + date + ' and ' + phonenumber
+    document.querySelector('body').appendChild(userDiv)
+    document.querySelector('#name').value = ''
+    document.querySelector('#date').value = ''
+    document.querySelector('#phonenumber').value = ''
+  }
+</script>
+
+
+<!--???? Footer ex 9 -->
+    
+<div class="div">
+  <img src="logo.png" alt="" class="img">
+  <h2>Barber Boba</h2> 
+  <h2 id="adress">Adress</h2>
+  <h3>Nikolla Jorga, Entrance.nr 23<br/></br> Tirana AL, 1001</h3>
+  
+<ul>
+<li><a href="https://www.google.com/maps/place/Barber+Boba/@41.323291,19.8078863,17z/data=!4m12!1m6!3m5!1s0x1350310124094545:0x8b2ab69d8a4c978f!2sBarber+Boba!8m2!3d41.323291!4d19.810075!3m4!1s0x1350310124094545:0x8b2ab69d8a4c978f!8m2!3d41.323291!4d19.810075"><img class="smedia" src="map.png"></a></li>
+</ul>
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2996.3367123731946!2d19.8078863!3d41.323291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1350310124094545%3A0x8b2ab69d8a4c978f!2sBarber%20Boba!5e0!3m2!1sen!2s!4v1587471081491!5m2!1sen!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+<a href="mailto:enriboba@bobabarber.al?Subject=Hello%20again" target="_top">enriboba@bobabarber.al</a><br/></br>
+
+<a href="callto:068 826 6666?Subject=Hello%20again" target="_top">+355 68 826 666</a>
+
+</div>
+
+<script>
+  
+</script> 
+
+  
+
+
+
+
+
+
+
+
+
+</body>
+</html>

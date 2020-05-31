@@ -1,0 +1,260 @@
+<style>
+body {
+  margin: 0;
+  min-width: 250px;
+}
+
+
+* {
+  width: 600;
+  box-sizing: border-box;
+  position: center;
+}
+
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  
+  
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+
+ul li:hover {
+  background: #ddd;
+}
+
+
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 5px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 15px;
+}
+
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+  }
+
+/* Style the header -----------------------------------------------------------------------*/
+.header {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+  width: 600px;
+  margin: auto;
+}
+
+
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+input {
+  margin: auto;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+
+.addBtn {
+  padding: 10px;
+  width: 15%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+
+body {
+	margin: 0;
+	background: rgb(151, 151, 151);
+	font-family: 'Century Gothic', sans-serif;
+	font-weight: 700;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+nav {
+  float: right; 
+}
+nav ul {
+  margin: auto;
+  padding: 0;
+  list-style: none;
+
+}
+
+nav li {
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  margin-left: 70px;
+  padding-top: 0px;
+  font-size: 16px;
+
+  position: relative;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  width: 100%;
+  background-color: #444;
+
+  position: absolute;
+  top: 0;
+  width: 600px;
+
+  transition: all ease-in-out 250ms;
+
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+
+
+body{
+  margin: 0;
+  padding: 0;
+  background: url(wallpaper.jpg) no-repeat;
+  background-size: cover;
+  width: 1200px;
+  
+}
+.div{
+  background-image: url('wallpaper.jpg');
+  width: 600px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  text-align: center;
+  margin: auto;
+  margin-top: 5%;
+  color: white;
+  font-family: 'Century Gothic',sans-serif;
+}
+.img{
+  border-radius: 50%;
+  width: 300px;
+  height: 280px;
+}
+.div h1{
+  font-size: 40px;
+  letter-spacing: 4px;
+  font-weight: 100;
+}
+.div h3{
+  font-size: 20px;
+  letter-spacing: 3px;
+  font-weight: 100;
+}
+.div p{
+  text-align: justify;
+}
+ul{
+  margin: 0;
+  padding: 0;
+}
+.div li{
+  display: inline-block;
+  margin: 6px;
+  list-style: none;
+}
+.div li a{
+  color: white;
+  text-decoration: none;
+  font-size: 65px;
+  transition: all ease-in-out 250ms;
+}
+.div li a:hover{
+  color: #b9b9b9;
+}
+.smedia {
+  padding: 40px;
+  font-size: 50px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 60%;
+}
+
