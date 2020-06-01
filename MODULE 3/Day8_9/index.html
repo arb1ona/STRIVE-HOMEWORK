@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+            MY_CODE= user16:c9WEUxMS294hN6fF  
+            You are building the new Amazon.
+            This time you are also responsible for the back office.
+            THIS is you CRUD endpoint
+            https://striveschool.herokuapp.com/api/product/
+            The product model is 
+            {
+                "_id": "5d318e1a8541744830bef139", //SERVER GENERATED
+                "name": "app test 1",  //REQUIRED
+                "description": "somthing longer", //REQUIRED
+                "brand": "nokia", //REQUIRED
+                "imageUrl": "https://drop.ndtv.com/TECH/product_database/images/2152017124957PM_635_nokia_3310.jpeg?downsize=*:420&output-quality=80", //REQUIRED
+                "price": 100, //REQUIRED
+                "userId": "admin", //SERVER GENERATED
+                "createdAt": "2019-07-19T09:32:10.535Z", //SERVER GENERATED
+                "updatedAt": "2019-07-19T09:32:10.535Z", //SERVER GENERATED
+                "__v": 0 //SERVER GENERATED
+            }
+            EVERY REST API CALL SHOULD BE AUTHENTICATED. You should have received a couple of username and password to use them with basic authentication.
+            To use Basic Auth, add to your fetch an header like:
+            Authorization: Basic ###########
+            Where ######### is the base64 version of username:password
+            Today you have to implement:
+            - A backoffice page, where you can insert the product by specifying the parameters
+            - A front page, where the user can see the available products
+            You can also start from the previous marketplace.
+        -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <title>Day8/Module3 - Strive</title>
+    <style>
+      .card:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 8px 0 rgba(226, 21, 21, 0.2),
+          0 6px 8px 0 rgba(187, 31, 31, 0.19);
+        z-index: 2;
+      }
+
+      .card {
+        transition: transform 1.5s;
+        z-index: 1;
+      }
+      .card img {
+        object-fit: contain;
+      }
+
+      .form-control:focus {
+        border: 1px solid #ced4da !important;
+        outline: none !important;
+        box-shadow: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">Myshop</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./backoffice.html">Backoffice</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="container">
+        <div
+          id="products"
+          class="row row-cols-2 row-cols-md-4 row-cols-lg-5 d-flex justify-content-center mb-5 mt-5"
+        ></div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./helper.js"></script>
+    <script>
+      window.onload = async () => {
+        var reference = document.querySelector("#products");
+        let data = await getData();
+        var products = [];
+        for (let i = 0; i < data.length; i++) {
+          products.push(data[i]);
+          reference.innerHTML += `
+                <div class="col text-center mb-3 mr-3">
+                    <div class="card" style="width: 12rem; border:0; font-size:12px;">
+                        <a href="detail.html?id=${data[i]._id}"><img src=${
+            data[i].imageUrl
+          } class="card-img-top" height="250px" alt=${data[i].name} photo></a>
+                        <div class="card-body flex-direction-column">
+                            <h6 class="card-title">${data[i].name}</h6>
+                            <p class="card-text">${data[i].description.slice(
+                              0,
+                              40
+                            )}...</p>
+                            <p class="card-text">Brand: ${data[i].brand}</p>
+                            <h6 class="card-title">Price: ${
+                              data[i].price
+                            } $</h6>
+                            </div>
+                    </div>
+                </div>
+                `;
+        }
+        filterProducts = () => {
+          let userInput = document
+            .querySelector("#userInput")
+            .value.toLowerCase();
+          let array = products.filter((product) =>
+            product.name.toLowerCase().includes(userInput)
+          );
+          if (userInput.length > 0) {
+            console.log(array);
+            reference.innerHTML = "";
+            for (let i = 0; i < array.length; i++) {
+              reference.innerHTML += `
+                    <div class="col text-center mb-3 mr-3">
+                        <div class="card" style="width: 12rem; border:0; font-size:12px;">
+                            <a href="detail.html?id=${array[i]._id}"><img src=${
+                array[i].imageUrl
+              } class="card-img-top" height="250px" alt=${
+                array[i].name
+              } photo></a>
+                            <div class="card-body flex-direction-column">
+                                <h6 class="card-title">${array[i].name}</h6>
+                                <p class="card-text">${array[
+                                  i
+                                ].description.slice(0, 40)}...</p>
+                                <p class="card-text">Brand: ${
+                                  array[i].brand
+                                }</p>
+                                <h6 class="card-title">Price: ${
+                                  array[i].price
+                                } $</h6>
+                                </div>
+                        </div>
+                    </div>
+                    `;
+            }
+          } else {
+            reference.innerHTML = "";
+            for (let i = 1; i < data.length; i++) {
+              reference.innerHTML += `
+                        <div class="col text-center mb-3 mr-3">
+                            <div class="card" style="width: 12rem; border:0; font-size:12px;">
+                                <a href="detail.html?id=${
+                                  data[i]._id
+                                }"><img src=${
+                data[i].imageUrl
+              } class="card-img-top" height="250px" alt=${
+                data[i].name
+              } photo></a>
+                                <div class="card-body flex-direction-column">
+                                    <h6 class="card-title">${data[i].name}</h6>
+                                    <p class="card-text">${data[
+                                      i
+                                    ].description.slice(0, 40)}...</p>
+                                    <p class="card-text">Brand: ${
+                                      data[i].brand
+                                    }</p>
+                                    <h6 class="card-title">Price: ${
+                                      data[i].price
+                                    } $</h6>
+                                    </div>
+                            </div>
+                        </div>
+                        `;
+            }
+          }
+        };
+      };
+    </script>
+  </body>
+</html>
