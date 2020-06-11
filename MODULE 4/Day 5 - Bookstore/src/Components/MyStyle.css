@@ -1,3 +1,12 @@
+.AVAST_PAM_signupform{
+  margin-top: 5%;
+ }
+ 
+ .form-row>.btn {
+   margin-left: 13%;
+   margin-top: 2%;
+   /* margin-right: 5%; */
+ }
 
 .row {
   margin-left: 0.5%;
