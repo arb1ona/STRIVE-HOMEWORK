@@ -1,23 +1,25 @@
 import React from "react";
 import NavBar from "./Components/NavBar";
-import MyJumbotron from "./Components/MyJumbotron";
-import BookList from "./Components/BookList"
+// import MyJumbotron from "./Components/MyJumbotron";
+// import BookList from "./Components/BookList"
+import Register from "./Components/Register"
+import Home from "./Components/Home"
 import Footer from "./Components/Footer";
-import SingleBook from "./Components/SingleBook";
-
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 
 
 function App() {
   return (
-    <div className="App">
+    <Router>
       <NavBar title="Wise Up" />
-      <MyJumbotron title="Welcome" />
+      {/* <MyJumbotron title="Welcome" /> */}
       {/* <SingleBook /> */}
-      <BookList />
-
+      {/* <BookList /> */}
+      <Route path="/register" exact component={Register} />
+      <Route path="/" exact component={Home} />
       <Footer />
-    </div >
+    </Router >
   );
 }
 
