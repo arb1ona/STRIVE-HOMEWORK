@@ -69,3 +69,16 @@ h4 {
 .col img:hover {
   transform: scale(1.1);
 }
+
+.form-row>.col {
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-top: 1.5%;
+
+}
+
+.form-row>.btn {
+  margin-left: 5.5%;
+  margin-top: 2%;
+  /* margin-right: 5%; */
+}
