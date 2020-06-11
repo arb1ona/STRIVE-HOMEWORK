@@ -45,7 +45,7 @@ const Footer = () => (
               <Col className="footer-links">
                 <p>
                   <a href="#" alt="footer link">
-                    Audio Description
+                    Audio Details
                   </a>
                 </p>
                 <p>
