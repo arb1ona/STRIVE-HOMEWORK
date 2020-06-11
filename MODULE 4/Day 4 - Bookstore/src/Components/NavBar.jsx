@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Navbar, Nav, Form, FormControl, Button } from "react-bootstrap";
+import { Link } from 'react-router-dom';
 
 const NavBar = (props) => {
     return (
@@ -7,14 +8,12 @@ const NavBar = (props) => {
         <Navbar bg="dark" variant="dark">
             <Navbar.Brand href="#home">{props.title}</Navbar.Brand>
             <Nav className="mr-auto">
-                <Nav.Link href="#home">Home</Nav.Link>
+                <Link to="/" className="nav-link">Home</Link>
                 <Nav.Link href="#about">About</Nav.Link>
                 <Nav.Link href="#browse">Browse</Nav.Link>
+                <Link to="/register" className="nav-link">Register</Link>
             </Nav>
-            {/* <Form inline>
-                <FormControl type="text" placeholder="Book Search ..." className="mr-sm-2" />
-                <Button variant="outline-info">Search</Button>
-            </Form> */}
+
         </Navbar>
     );
 };
