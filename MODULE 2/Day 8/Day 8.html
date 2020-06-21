@@ -10,67 +10,49 @@
         10 CSS Exercises
         10 JS Exercises
     -->
-
 <head>
     <style>
 /*  EX1) Write a selector to target the main title of the page */
-
         .jumbotron .col-md-6 .display-4{
            color: rgb(0, 140, 255);
        }
 /*EX2) Write a selector to target every children of the navbar */
-        
         .nav-scroller .nav > *{
                 color: red!important;
             }
-
 /*EX3) Write a selector to target the "continue reading..." inside the jumbotron */
-
         .jumbotron .col-md-6 .text-white{
                 color: green!important;
             }
-
 /*EX4) Write a selector to target the first blogpost */
-
         .blog-main > div:first-of-type {
             color: rgb(255, 0, 191)!important;
         }
-
 /* EX5) Write a selector to target the "even" links in the navbar */
-
         .nav-scroller .nav :nth-child(2n +2) { 
         border: 2px solid black!important;
         }
-
 /* EX6) Write a selector to target the last blog post */
 
         .blog-main > div:last-of-type {
             color: green!important;
-        }
-            
+        }   
 /* EX7) Write a selector to target all the li into the sidebar */
         .blog-sidebar .list-unstyled li a{
             color: gold!important;
-        }
-           
+        }   
 /* EX8) Write a selector to target the second post author */
-
         .blog-main > div:nth-child(3) a{
             color: rgb(230, 9, 131)!important;
         }
-
 /* EX9) Write a selector to target the "back to top" link +++ */
-
         .blog-footer p:last-child a{ 
             color: orangered!important;
         }
-
 /* EX10) Write a selector to target the footer +++ */
-
         .blog-footer{ 
             background-color: rgb(2, 255, 234);
             }
-
     </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
