@@ -1,7 +1,6 @@
 import React from "react";
 import { Form, Col, Button } from "react-bootstrap";
 
-
 const initialState = {
     name: "",
     email: "",
@@ -95,11 +94,7 @@ export default class Register extends React.Component {
                     </Button>
                 </Form.Row>
 
-
-
-
                 {/* 
-
                 <form onSubmit={this.handleSubmit}>
                     <div>
                         <input
