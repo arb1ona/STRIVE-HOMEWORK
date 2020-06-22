@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Row, Col, Card, Container, Button, Badge } from 'react-bootstrap'
 import books from "../data/romance.json"
 
-
 let bookCategories = ["fantasy", "horror", "history", "romance"]
 
 class BookList extends Component {
@@ -10,6 +9,7 @@ class BookList extends Component {
     state = {
         size: 8,
     }
+
     increase = () => {
         this.setState({
             size: this.state.size + 8
@@ -38,6 +38,7 @@ class BookList extends Component {
             </Container >
         )
     }
+
     componentDidMount = async () => {
         const resp = await fetch("http://striveschool.herokuapp.com/books?offset=0&limit=50")
         if (resp.ok) {
