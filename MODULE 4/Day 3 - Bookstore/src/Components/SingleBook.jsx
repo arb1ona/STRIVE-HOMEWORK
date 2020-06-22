@@ -7,36 +7,38 @@ function SingleBook(props) {
 
     return (
         <Card className="p-3">
-            <Link
+            <Link 
                 style={{ textDecoration: "none", color: "inherit" }}
-                to={`/book/${book.asin}`}
+                  to={`/book/${book.asin}`}
             >
                 <Card.Img
                     style={{ width: "100%", objectFit: "cover" }}
                     variant="top"
-                    src={book.img}
-                />
+                    src={book.img}/>
             </Link>
+            
             <Card.Body>
                 <Badge pill variant="danger">
                     {book.category}
                 </Badge>
+                
                 <Link
                     style={{ textDecoration: "none", color: "inherit" }}
                     to={`/book/${book.asin}`}
                 >
                     <Card.Title>{book.title}</Card.Title>
                 </Link>
+                
                 <Card.Text>
                     <div style={{ textDecoration: "line-through", color: "darkgrey" }}>
                         {(book.price * (1 + 0.5)).toFixed(2)}€
-          </div>
+                    </div>
                     <strong style={{ fontSize: "20pt" }}>{book.price}€</strong>
                 </Card.Text>
 
                 <Button size={"sm"} style={{ width: "100%" }} variant="dark">
                     Add to Cart
-        </Button>
+                </Button>
             </Card.Body>
         </Card>
     );
