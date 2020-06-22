@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import { Navbar, Nav } from "react-bootstrap";
 
 const NavBar = (props) => {
+  
   return (
+    
     <Navbar bg="light" expand="lg">
       <Navbar.Brand href="#home">
         {props.title} - Enrich your life!
