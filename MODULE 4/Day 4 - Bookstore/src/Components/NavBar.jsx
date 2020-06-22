@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 const NavBar = (props) => {
     return (
-
         <Navbar bg="dark" variant="dark">
             <Navbar.Brand href="#home">{props.title}</Navbar.Brand>
             <Nav className="mr-auto">
@@ -13,7 +12,6 @@ const NavBar = (props) => {
                 <Nav.Link href="#browse">Browse</Nav.Link>
                 <Link to="/register" className="nav-link">Register</Link>
             </Nav>
-
         </Navbar>
     );
 };
