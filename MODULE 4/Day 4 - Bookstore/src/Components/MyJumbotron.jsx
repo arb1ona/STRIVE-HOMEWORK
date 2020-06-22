@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Jumbotron, Button } from 'react-bootstrap';
 import './MyStyle.css';
 
-
 const MyJumbotron = () => {
     return (
         <Jumbotron fluid text-center>
