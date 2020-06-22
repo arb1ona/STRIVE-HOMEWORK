@@ -3,7 +3,6 @@ import { Row, Col, Card, Container, Button, Badge, FormControl } from 'react-boo
 import books from "../data/romance.json"
 import './MyStyle.css';
 
-
 let bookCategories = ["Fantasy", "Horror", "History", "Romance"]
 
 class BookList extends Component {
@@ -48,7 +47,6 @@ class BookList extends Component {
                     }
                 </Row>
                 <Row>
-
                 </Row>
                 <Button onClick={this.increase}>Add 8 more books</Button>
             </Container >
