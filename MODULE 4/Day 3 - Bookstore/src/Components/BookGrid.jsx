@@ -7,8 +7,6 @@ class BookList extends Component {
         books: []
     }
 
-
-
     render() {
         return (
             <Container>
