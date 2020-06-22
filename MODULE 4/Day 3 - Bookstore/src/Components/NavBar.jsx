@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { Navbar, Nav, Form, FormControl, Button } from "react-bootstrap";
 
 const NavBar = (props) => {
+    
     return (
-
         <Navbar bg="dark" variant="dark">
             <Navbar.Brand href="#home">{props.title}</Navbar.Brand>
             <Nav className="mr-auto">
